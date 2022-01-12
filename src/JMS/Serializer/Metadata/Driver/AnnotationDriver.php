@@ -18,7 +18,6 @@ use JMS\Serializer\Annotation\MaxDepth;
 use JMS\Serializer\Annotation\PostDeserialize;
 use JMS\Serializer\Annotation\PostSerialize;
 use JMS\Serializer\Annotation\PreSerialize;
-use JMS\Serializer\Annotation\ReadOnly;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Since;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -77,9 +76,9 @@ class AnnotationDriver implements DriverInterface
                 $excludeAll = true;
             } elseif ($annot instanceof AccessType) {
                 $classAccessType = $annot->type;
-            } elseif ($annot instanceof ReadOnly) {
+            }/* elseif ($annot instanceof ReadOnly) {
                 $readOnlyClass = true;
-            } elseif ($annot instanceof AccessorOrder) {
+            }*/ elseif ($annot instanceof AccessorOrder) {
                 $classMetadata->setAccessorOrder($annot->order, $annot->custom);
             } elseif ($annot instanceof Discriminator) {
                 if ($annot->disabled) {
@@ -196,9 +195,9 @@ class AnnotationDriver implements DriverInterface
                         $propertyMetadata->xmlElementCData = $annot->cdata;
                     } elseif ($annot instanceof AccessType) {
                         $accessType = $annot->type;
-                    } elseif ($annot instanceof ReadOnly) {
+                    }/* elseif ($annot instanceof ReadOnly) {
                         $propertyMetadata->readOnly = $annot->readOnly;
-                    } elseif ($annot instanceof Accessor) {
+                    } */elseif ($annot instanceof Accessor) {
                         $accessor = array($annot->getter, $annot->setter);
                     } elseif ($annot instanceof Groups) {
                         $propertyMetadata->groups = $annot->groups;
