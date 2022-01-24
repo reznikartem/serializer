@@ -10,7 +10,9 @@ use JMS\Serializer\SerializerInterface;
  *
  * Basically provides access to JMSSerializer from Twig
  */
-class SerializerExtension extends \Twig_Extension
+class SerializerExtension
+{
+}/*extends \Twig_Extension
 {
     protected $serializer;
 
@@ -42,9 +44,10 @@ class SerializerExtension extends \Twig_Extension
      * @param object $object
      * @param string $type
      * @param SerializationContext $context
-     */
+     * /
     public function serialize($object, $type = 'json', SerializationContext $context = null)
     {
         return $this->serializer->serialize($object, $type, $context);
     }
 }
+*/
