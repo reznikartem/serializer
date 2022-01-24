@@ -5,7 +5,7 @@ namespace JMS\Serializer\Twig;
 /**
  * @author Asmir Mustafic <goetas@gmail.com>
  */
-final class SerializerRuntimeExtension {}/*extends \Twig_Extension
+final class SerializerRuntimeExtension extends \Twig_Extension
 {
 
     public function getName()
@@ -27,4 +27,3 @@ final class SerializerRuntimeExtension {}/*extends \Twig_Extension
         );
     }
 }
-*/
